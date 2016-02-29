@@ -17,7 +17,7 @@
         android:src="@drawable/trump_16_banner"
         android:scaleType="fitXY"
         android:layout_alignParentTop="true"
-        android:id="@+id/imageView"
+        android:id="@+id/maga_banner"
         android:contentDescription="@string/banner_description" />
 
     <ImageView
@@ -25,15 +25,26 @@
         android:layout_height="match_parent"
         android:src="@drawable/youre_fired"
         android:scaleType="centerCrop"
-        android:layout_below="@+id/imageView"
-        android:contentDescription="@string/background_description" />
+        android:layout_below="@+id/maga_banner"
+        android:contentDescription="@string/background_description"
+        android:id="@+id/imageView2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/record_list"
+        android:textSize="16sp"
+        android:text="@string/record_list_text"
+        android:onClick="playRecording"
+        android:layout_height="190dp"
+        android:visibility="invisible"/>
 
     <LinearLayout
         android:baselineAligned="false"
+        android:id="@+id/linear_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/imageView"
+        android:layout_below="@+id/record_button"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
@@ -54,4 +65,24 @@
         </ListView>
 
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/record_button"
+        android:onClick="beginRecord"
+        android:id="@+id/record_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/maga_banner" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stop_buttoon"
+        android:onClick="stopRecord"
+        android:id="@+id/stop_button"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/maga_banner" />
 </RelativeLayout>

@@ -9,6 +9,12 @@
             <item >@string/jeb_bush</item>
             <item >@string/ted</item>
             <item >@string/bernie</item>
+            <item >@string/little_marco</item>
+            <item >@string/glenn_beck</item>
+            <item >@string/dopey_glenn_beck</item>
+            <item >@string/glenn_loser</item>
+            <item >@string/bernie_people</item>
+            <item >@string/bernie_finished</item>
             <item >@string/obama</item>
             <item >@string/clinton_and_obama</item>
             <item >@string/mexican_people</item>
@@ -24,6 +30,9 @@
             <item >@string/saudis</item>
             <item >@string/mexico</item>
             <item >@string/we_want_trump_button</item>
+            <item >@string/poor_president</item>
+            <item >@string/jeb_so_wrong</item>
+            <item >@string/biggest_liar</item>
         </string-array>
 
         <string-array name="portrait_end">
@@ -38,6 +47,11 @@
             <item >@string/traitor</item>
             <item >@string/a_pussy</item>
             <item >@string/better_iq</item>
+            <item >@string/always_crying</item>
+            <item >@string/basket_case</item>
+            <item >@string/dog_catcher</item>
+            <item >@string/quiet</item>
+            <item >@string/sad_sack</item>
             <item >@string/low_energy_guy</item>
             <item >@string/maniac</item>
             <item >@string/garbage</item>
@@ -53,8 +67,9 @@
             <item >@string/nice_person</item>
             <item >@string/fired</item>
             <item >@string/walls</item>
-            <item >@string/ugh</item>
+            <item >@string/ten_feet_higher</item>
             <item >@string/great_great_wall</item>
+            <item >@string/ugh</item>
             <item >@string/captured</item>
             <item >@string/wait_a_minute</item>
             <item >@string/political_bullshit</item>
@@ -81,5 +96,13 @@
             <item >@string/trade</item>
             <item >@string/hammer</item>
             <item >@string/trouble</item>
+            <item >@string/big_mistake</item>
+            <item >@string/choke_artist</item>
+            <item >@string/illegal</item>
+            <item >@string/lobby</item>
+            <item >@string/pants_off</item>
+            <item >@string/swing_for_fences</item>
+            <item >@string/big_league</item>
+            <item >@string/yuge</item>
         </string-array>
 </resources>

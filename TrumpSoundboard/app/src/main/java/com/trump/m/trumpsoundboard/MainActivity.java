@@ -25,12 +25,18 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.io.IOException;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private MediaPlayer mp;
+    private boolean recording = false;
+    private TextView recordList;
+    private Queue soundQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +57,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 R.layout.list_entry_right, getResources().getTextArray(R.array.portrait_end));
         listViewRight.setAdapter(portraitEndAdapter);
         listViewRight.setOnItemClickListener(this);
+
+        recordList = (TextView) findViewById(R.id.record_list);
+
+        soundQueue = new LinkedList();
     }
 
     @Override
@@ -72,8 +82,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             cleanMediaPlayer();
         super.onDestroy();
     }
-
-
 
     private void initializeMediaPlayer() {
         mp = new MediaPlayer();
@@ -110,13 +118,65 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
         }
 
+        if (!recording) {
+            try {
+                mp.reset();
+                Uri uri = Uri.parse("android.resource://com.trump.m.trumpsoundboard/" + soundID);
+                mp.setDataSource(getApplicationContext(), uri);
+                mp.prepareAsync();
+            } catch (IOException e) {
+                Log.e(getPackageName(), e.toString());
+            }
+        } else {
+            StringBuilder recordListText = new StringBuilder(recordList.getText());
+            recordListText.append("    ");
+            recordListText.append(parent.getItemAtPosition(position).toString());
+            recordList.setText(recordListText);
+            soundQueue.add(soundID);
+        }
+    }
+
+    public void beginRecord(View view) {
+        recording = true;
+        findViewById(R.id.maga_banner).setVisibility(View.INVISIBLE);
+        recordList.setVisibility(View.VISIBLE);
+    }
+
+    public void stopRecord(View view) {
+        recording = false;
+        findViewById(R.id.maga_banner).setVisibility(View.VISIBLE);
+        recordList.setVisibility(View.INVISIBLE);
+        recordList.setText(R.string.record_list_text);
+        soundQueue.clear();
+    }
+
+    public void playRecording(View view) {
+        Uri uri;
         try {
             mp.reset();
-            Uri uri = Uri.parse("android.resource://com.trump.m.trumpsoundboard/" + soundID);
+            uri = Uri.parse("android.resource://com.trump.m.trumpsoundboard/" + soundQueue.poll());
             mp.setDataSource(getApplicationContext(), uri);
             mp.prepareAsync();
         } catch (IOException e) {
             Log.e(getPackageName(), e.toString());
         }
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                if (!soundQueue.isEmpty()) {
+                    Log.e(getPackageName(), "Playing " + soundQueue.peek());
+                    Uri uri;
+                    try {
+                        mp.reset();
+                        uri = Uri.parse("android.resource://com.trump.m.trumpsoundboard/" + soundQueue.poll());
+                        mp.setDataSource(getApplicationContext(), uri);
+                        mp.prepareAsync();
+                    } catch (IOException e) {
+                        Log.e(getPackageName(), e.toString());
+                    }
+                }
+            }
+        });
+        recordList.setText(R.string.record_list_text);
     }
 }

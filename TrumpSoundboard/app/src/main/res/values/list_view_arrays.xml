@@ -8,6 +8,7 @@
             <item >@string/hillary</item>
             <item >@string/jeb_bush</item>
             <item >@string/ted</item>
+            <item >@string/lyin_ted</item>
             <item >@string/bernie</item>
             <item >@string/little_marco</item>
             <item >@string/glenn_beck</item>
@@ -18,14 +19,18 @@
             <item >@string/obama</item>
             <item >@string/clinton_and_obama</item>
             <item >@string/mexican_people</item>
+            <item >@string/speak_english</item>
             <item >@string/drugs_crime_rapists</item>
+            <item >@string/killers_rapists</item>
             <item >@string/i_like_china</item>
             <item >@string/chyna</item>
+            <item >@string/chyyna</item>
             <item >@string/china_all_the_time_button</item>
             <item >@string/rosie</item>
             <item >@string/president</item>
             <item >@string/rubio_lightweight</item>
             <item >@string/rubio_speaker</item>
+            <item >@string/mitt_knees</item>
             <item >@string/tough_guy_button</item>
             <item >@string/saudis</item>
             <item >@string/mexico</item>
@@ -33,6 +38,14 @@
             <item >@string/poor_president</item>
             <item >@string/jeb_so_wrong</item>
             <item >@string/biggest_liar</item>
+            <item >@string/excuse_me_jeb</item>
+            <item >@string/big_don</item>
+            <item >@string/tired_of_winning</item>
+            <item >@string/excuse_me</item>
+            <item >@string/believe_me</item>
+            <item >@string/understand</item>
+            <item >@string/i_will_tell_you</item>
+            <item >@string/air_horn</item>
         </string-array>
 
         <string-array name="portrait_end">
@@ -42,6 +55,7 @@
             <item >@string/losers</item>
             <item >@string/a_stiff</item>
             <item >@string/nasty_guy_button</item>
+            <item >@string/nasty</item>
             <item >@string/embarrassed</item>
             <item >@string/admonished</item>
             <item >@string/traitor</item>
@@ -52,6 +66,7 @@
             <item >@string/dog_catcher</item>
             <item >@string/quiet</item>
             <item >@string/sad_sack</item>
+            <item >@string/pathetic_baby</item>
             <item >@string/low_energy_guy</item>
             <item >@string/maniac</item>
             <item >@string/garbage</item>
@@ -69,6 +84,9 @@
             <item >@string/walls</item>
             <item >@string/ten_feet_higher</item>
             <item >@string/great_great_wall</item>
+            <item >@string/whos_gonna_pay</item>
+            <item >@string/mexico_will_pay</item>
+            <item >@string/have_to_go_back</item>
             <item >@string/ugh</item>
             <item >@string/captured</item>
             <item >@string/wait_a_minute</item>
@@ -77,6 +95,7 @@
             <item >@string/all_talk</item>
             <item >@string/not_a_nice_person</item>
             <item >@string/getem_outta_here</item>
+            <item >@string/out_out_out</item>
             <item >@string/remnant</item>
             <item >@string/the_raping_button</item>
             <item >@string/no_coats</item>

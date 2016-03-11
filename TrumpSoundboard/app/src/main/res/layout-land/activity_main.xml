@@ -4,11 +4,11 @@
     style="?android:attr/buttonBarStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/relative_layout"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/colorPrimaryDark"
     tools:context="com.trump.m.trumpsoundboard.MainActivity">
 
     <ImageView
@@ -21,7 +21,7 @@
 
     <LinearLayout
         android:baselineAligned="false"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_alignParentLeft="true"
@@ -29,20 +29,29 @@
 
         <ListView
             android:id="@+id/buttonList1"
-            android:layout_width="wrap_content"
+            android:layout_width="182dp"
             android:divider="@null"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_height="wrap_content">
         </ListView>
 
         <ListView
             android:id="@+id/buttonList2"
-            android:layout_width="wrap_content"
+            android:layout_width="196dp"
             android:divider="@null"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_height="wrap_content">
         </ListView>
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="193dp"
+        android:id="@+id/record_list"
+        android:textSize="16sp"
+        android:padding="4dp"
+        android:textStyle="italic"
+        android:text="@string/record_list_text"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

@@ -2,13 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="?android:attr/buttonBarStyle"
+    android:id="@+id/relative_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/colorPrimaryDark"
     tools:context="com.trump.m.trumpsoundboard.MainActivity">
 
     <ImageView
@@ -33,10 +33,11 @@
         android:layout_width="match_parent"
         android:id="@+id/record_list"
         android:textSize="16sp"
+        android:padding="4dp"
+        android:textStyle="italic"
         android:text="@string/record_list_text"
-        android:onClick="playRecording"
-        android:layout_height="190dp"
-        android:visibility="invisible"/>
+        android:background="@color/colorPrimaryLight"
+        android:layout_height="0dp" />
 
     <LinearLayout
         android:baselineAligned="false"
@@ -44,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/record_button"
+        android:layout_below="@+id/maga_banner"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
@@ -66,23 +67,4 @@
 
     </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/record_button"
-        android:onClick="beginRecord"
-        android:id="@+id/record_button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@id/maga_banner" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/stop_buttoon"
-        android:onClick="stopRecord"
-        android:id="@+id/stop_button"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/maga_banner" />
 </RelativeLayout>

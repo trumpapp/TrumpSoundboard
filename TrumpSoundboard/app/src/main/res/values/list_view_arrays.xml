@@ -45,17 +45,25 @@
             <item >@string/believe_me</item>
             <item >@string/understand</item>
             <item >@string/i_will_tell_you</item>
+            <item >@string/the_story</item>
             <item >@string/air_horn</item>
+            <item >@string/ooh</item>
+            <item >@string/bing_bong</item>
+            <item >@string/bye_bye</item>
         </string-array>
 
         <string-array name="portrait_end">
             <item >@string/low_energy</item>
             <item >@string/more_energy_button</item>
             <item >@string/hard_time_button</item>
+            <item >@string/rotten_cheater</item>
+            <item >@string/bible_high</item>
+            <item >@string/a_liar</item>
             <item >@string/losers</item>
             <item >@string/a_stiff</item>
             <item >@string/nasty_guy_button</item>
             <item >@string/nasty</item>
+            <item >@string/incompetent</item>
             <item >@string/embarrassed</item>
             <item >@string/admonished</item>
             <item >@string/traitor</item>
